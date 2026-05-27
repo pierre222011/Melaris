@@ -1,0 +1,38 @@
+{
+  "Index": {
+    "title": "Construisez le futur de l'IA avec Melaris",
+    "subtitle": "Une plateforme SaaS futuriste et premium conçue pour les startups IA modernes. Évolutive, multilingue et magnifique.",
+    "cta_primary": "Commencer",
+    "cta_secondary": "Voir les fonctionnalités"
+  },
+  "Navigation": {
+    "features": "Fonctionnalités",
+    "pricing": "Tarifs",
+    "about": "À propos"
+  },
+  "Marketing": {
+    "badge": "L'écosystème Melaris v2.0 est en ligne",
+    "title": "L'écosystème IA Ultime",
+    "subtitle": "Débloquez plus de 15 outils d'IA de nouvelle génération. De la création de contenu au jeu vidéo en passant par l'éducation, entrez dans le futur de la productivité.",
+    "enter_dashboard": "Accéder au Dashboard",
+    "view_roadmap": "Voir la Roadmap",
+    "card_categories_title": "15+ Outils IA",
+    "card_categories_desc": "Explorez des catégories comme Fortnite, Création de contenu, Outils Discord, et Astuces de vie courante.",
+    "card_categories_link": "Explorer les catégories",
+    "card_labs_title": "Laboratoires Expérimentaux",
+    "card_labs_desc": "Testez des fonctionnalités IA hautement instables et de nouvelle génération avant leur sortie publique.",
+    "card_labs_link": "Entrer dans les Labs",
+    "card_roadmap_title": "Roadmap Publique",
+    "card_roadmap_desc": "Votez pour les fonctionnalités à venir, suivez l'avancement du développement et façonnez le futur de Melaris.",
+    "card_roadmap_link": "Voir la Roadmap"
+  },
+  "Dashboard": {
+    "title": "Tableau de Bord Melaris",
+    "subtitle": "Bienvenue dans l'écosystème IA de nouvelle génération. Explorez nos outils actifs, votez sur la roadmap, et découvrez l'avenir de la création de contenu et du jeu vidéo.",
+    "active_tools": "Outils Actifs",
+    "in_dev": "En Développement",
+    "experimental": "Laboratoires Expérimentaux",
+    "unstable": "Hautement Instable",
+    "future_vision": "Vision du Futur"
+  }
+}

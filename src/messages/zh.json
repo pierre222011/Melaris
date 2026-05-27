@@ -1,0 +1,38 @@
+{
+  "Index": {
+    "title": "用 Melaris 构建人工智能的未来",
+    "subtitle": "为现代人工智能初创企业打造的高级黑色未来主义 SaaS 平台。可扩展，多语言，令人惊叹。",
+    "cta_primary": "开始使用",
+    "cta_secondary": "查看功能"
+  },
+  "Navigation": {
+    "features": "功能",
+    "pricing": "定价",
+    "about": "关于"
+  },
+  "Marketing": {
+    "badge": "Melaris 生态系统 v2.0 已上线",
+    "title": "终极人工智能生态系统",
+    "subtitle": "解锁 15 款以上下一代 AI 工具。从内容创作到游戏和教育，步入生产力的未来。",
+    "enter_dashboard": "进入仪表板",
+    "view_roadmap": "查看路线图",
+    "card_categories_title": "15+ AI 工具",
+    "card_categories_desc": "探索诸如堡垒之夜、内容创作、Discord 工具和生活技巧等类别。",
+    "card_categories_link": "探索分类",
+    "card_labs_title": "实验实验室",
+    "card_labs_desc": "在向公众发布之前测试极不稳定的下一代 AI 功能。",
+    "card_labs_link": "进入实验室",
+    "card_roadmap_title": "公共路线图",
+    "card_roadmap_desc": "对即将推出的功能进行投票，跟踪开发进度并塑造 Melaris 的未来。",
+    "card_roadmap_link": "查看路线图"
+  },
+  "Dashboard": {
+    "title": "Melaris 仪表板",
+    "subtitle": "欢迎来到下一代 AI 生态系统。探索我们活跃的工具，在路线图上投票，并发现内容创作和游戏的未来。",
+    "active_tools": "活跃工具",
+    "in_dev": "开发中",
+    "experimental": "实验实验室",
+    "unstable": "极不稳定",
+    "future_vision": "未来愿景"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "Index": {
+    "title": "Build the future of AI with Melaris",
+    "subtitle": "A premium, dark futuristic SaaS platform built for modern AI startups. Scalable, multilingual, and stunning.",
+    "cta_primary": "Get Started",
+    "cta_secondary": "View Features"
+  },
+  "Navigation": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "about": "About"
+  },
+  "Marketing": {
+    "badge": "Melaris Ecosystem v2.0 is live",
+    "title": "The Ultimate AI Ecosystem",
+    "subtitle": "Unlock 15+ next-generation AI tools. From Content Creation to Gaming and Education, step into the future of productivity.",
+    "enter_dashboard": "Enter Dashboard",
+    "view_roadmap": "View Roadmap",
+    "card_categories_title": "15+ AI Tools",
+    "card_categories_desc": "Explore categories like Fortnite, Content Creation, Discord Tools, and Real Life Hacks.",
+    "card_categories_link": "Explore Categories",
+    "card_labs_title": "Experimental Labs",
+    "card_labs_desc": "Test highly unstable, next-gen AI features before they are released to the public.",
+    "card_labs_link": "Enter Labs",
+    "card_roadmap_title": "Public Roadmap",
+    "card_roadmap_desc": "Vote on upcoming features, track development progress, and shape the future of Melaris.",
+    "card_roadmap_link": "View Roadmap"
+  },
+  "Dashboard": {
+    "title": "Melaris Dashboard",
+    "subtitle": "Welcome to the next-generation AI ecosystem. Explore our active tools, vote on the roadmap, and discover the future of content creation and gaming.",
+    "active_tools": "Active Tools",
+    "in_dev": "In Development",
+    "experimental": "Experimental Labs",
+    "unstable": "Highly Unstable",
+    "future_vision": "Future Vision"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "Index": {
+    "title": "Gestalten Sie die Zukunft der KI mit Melaris",
+    "subtitle": "Eine erstklassige, dunkel-futuristische SaaS-Plattform für moderne KI-Startups. Skalierbar, mehrsprachig und atemberaubend.",
+    "cta_primary": "Loslegen",
+    "cta_secondary": "Funktionen ansehen"
+  },
+  "Navigation": {
+    "features": "Funktionen",
+    "pricing": "Preise",
+    "about": "Über uns"
+  },
+  "Marketing": {
+    "badge": "Das Melaris-Ökosystem v2.0 ist live",
+    "title": "Das ultimative KI-Ökosystem",
+    "subtitle": "Schalten Sie über 15 KI-Tools der nächsten Generation frei. Von der Inhaltserstellung über Spiele bis hin zur Bildung – betreten Sie die Zukunft der Produktivität.",
+    "enter_dashboard": "Zum Dashboard",
+    "view_roadmap": "Roadmap ansehen",
+    "card_categories_title": "15+ KI-Tools",
+    "card_categories_desc": "Entdecken Sie Kategorien wie Fortnite, Inhaltserstellung, Discord-Tools und Real Life Hacks.",
+    "card_categories_link": "Kategorien entdecken",
+    "card_labs_title": "Experimentelle Labore",
+    "card_labs_desc": "Testen Sie hochelastische KI-Funktionen der nächsten Generation, bevor sie der Öffentlichkeit zugänglich gemacht werden.",
+    "card_labs_link": "Labs betreten",
+    "card_roadmap_title": "Öffentliche Roadmap",
+    "card_roadmap_desc": "Stimmen Sie über kommende Funktionen ab, verfolgen Sie den Entwicklungsfortschritt und gestalten Sie die Zukunft von Melaris.",
+    "card_roadmap_link": "Roadmap ansehen"
+  },
+  "Dashboard": {
+    "title": "Melaris Dashboard",
+    "subtitle": "Willkommen im KI-Ökosystem der nächsten Generation. Entdecken Sie unsere aktiven Tools, stimmen Sie über die Roadmap ab und entdecken Sie die Zukunft.",
+    "active_tools": "Aktive Tools",
+    "in_dev": "In Entwicklung",
+    "experimental": "Experimentelle Labore",
+    "unstable": "Sehr instabil",
+    "future_vision": "Zukunftsvision"
+  }
+}

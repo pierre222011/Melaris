@@ -1,0 +1,38 @@
+{
+  "Index": {
+    "title": "Construye el futuro de la IA con Melaris",
+    "subtitle": "Una plataforma SaaS futurista y premium diseñada para las startups de IA modernas. Escalable, multilingüe e impresionante.",
+    "cta_primary": "Empezar",
+    "cta_secondary": "Ver características"
+  },
+  "Navigation": {
+    "features": "Características",
+    "pricing": "Precios",
+    "about": "Acerca de"
+  },
+  "Marketing": {
+    "badge": "El ecosistema Melaris v2.0 está activo",
+    "title": "El Ecosistema de IA Definitivo",
+    "subtitle": "Desbloquea más de 15 herramientas de IA de próxima generación. Desde la creación de contenido hasta los juegos y la educación, da el paso hacia el futuro de la productividad.",
+    "enter_dashboard": "Entrar al Panel",
+    "view_roadmap": "Ver Hoja de Ruta",
+    "card_categories_title": "15+ Herramientas de IA",
+    "card_categories_desc": "Explora categorías como Fortnite, Creación de contenido, Herramientas de Discord y Trucos de vida.",
+    "card_categories_link": "Explorar Categorías",
+    "card_labs_title": "Laboratorios Experimentales",
+    "card_labs_desc": "Prueba características de IA de próxima generación altamente inestables antes de que se lancen al público.",
+    "card_labs_link": "Entrar a los Laboratorios",
+    "card_roadmap_title": "Hoja de Ruta Pública",
+    "card_roadmap_desc": "Vota por las próximas funciones, sigue el progreso del desarrollo y da forma al futuro de Melaris.",
+    "card_roadmap_link": "Ver Hoja de Ruta"
+  },
+  "Dashboard": {
+    "title": "Panel de Melaris",
+    "subtitle": "Bienvenido al ecosistema de IA de próxima generación. Explora nuestras herramientas activas, vota en la hoja de ruta y descubre el futuro de la creación de contenido y los juegos.",
+    "active_tools": "Herramientas Activas",
+    "in_dev": "En Desarrollo",
+    "experimental": "Laboratorios Experimentales",
+    "unstable": "Altamente Inestable",
+    "future_vision": "Visión del Futuro"
+  }
+}
