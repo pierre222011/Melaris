@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages, setRequestLocale} from 'next-intl/server';
 import {routing} from '@/i18n/routing';
@@ -39,6 +40,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
