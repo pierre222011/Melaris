@@ -15,6 +15,7 @@ export default function GlobalSearch() {
   const [allFeatures, setAllFeatures] = useState<Feature[]>([]);
   const [loaded, setLoaded] = useState(false);
   const router = useRouter();
+  const t = useTranslations('Features');
 
   // Handle Cmd+K / Ctrl+K
   useEffect(() => {
