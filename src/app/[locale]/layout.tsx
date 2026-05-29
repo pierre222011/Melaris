@@ -1,3 +1,4 @@
+import { ClerkProvider } from "@clerk/nextjs";
 import { Analytics } from "@vercel/analytics/next";
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages, setRequestLocale} from 'next-intl/server';
@@ -12,6 +13,8 @@ const syne = Syne({ subsets: ['latin'], variable: '--font-syne' });
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({locale}));
 }
+
+import KonamiCode from '@/components/ui/KonamiCode';
 
 export default async function LocaleLayout({
   children,
@@ -35,13 +38,16 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
+    <ClerkProvider>
     <html lang={locale} className="dark" suppressHydrationWarning>
       <body className={`${inter.variable} ${syne.variable} font-sans bg-[#050816] text-white antialiased`}>
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
+        <KonamiCode />
         <Analytics />
       </body>
     </html>
+    </ClerkProvider>
   );
 }

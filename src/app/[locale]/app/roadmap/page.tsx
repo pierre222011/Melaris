@@ -1,11 +1,14 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { featuresData } from '@/data/features';
+import { getFeatures } from '@/app/actions/features';
 import RoadmapBoard from '@/components/ui/RoadmapBoard';
 
 export default async function RoadmapPage({params}: {params: Promise<{locale: string}>}) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('Dashboard'); // Reuse dashboard translations or create Roadmap namespace
+
+  // Fetch from Supabase
+  const featuresData = await getFeatures();
 
   return (
     <div className="p-8 pb-24">

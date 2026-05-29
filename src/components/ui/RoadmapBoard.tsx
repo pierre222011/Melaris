@@ -4,19 +4,39 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Feature } from '@/types';
 import FeatureCard from './FeatureCard';
+import { voteForFeature } from '@/app/actions/features';
 
 export default function RoadmapBoard({ initialFeatures }: { initialFeatures: Feature[] }) {
   const [features, setFeatures] = useState<Feature[]>(initialFeatures);
   const [sortBy, setSortBy] = useState<'votes' | 'progress'>('votes');
   const [filterStatus, setFilterStatus] = useState<string>('All');
 
-  const handleVote = (id: string) => {
+  const handleVote = async (id: string) => {
+    // Check if already voted to prevent unnecessary network requests
+    const feature = features.find(f => f.id === id);
+    if (feature?.user_has_voted) return;
+
+    // Optimistic UI update
     setFeatures(prev => prev.map(f => {
       if (f.id === id) {
-        return { ...f, votes: f.votes + 1 };
+        return { ...f, votes: f.votes + 1, user_has_voted: true };
       }
       return f;
     }));
+
+    try {
+      await voteForFeature(id);
+    } catch (error: any) {
+      // Revert optimistic update on failure
+      setFeatures(prev => prev.map(f => {
+        if (f.id === id) {
+          return { ...f, votes: f.votes - 1, user_has_voted: false };
+        }
+        return f;
+      }));
+      // Alert the user (simple fallback, ideally use a toast component)
+      alert(error.message);
+    }
   };
 
   const filteredFeatures = features.filter(f => {

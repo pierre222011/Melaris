@@ -1,22 +1,52 @@
+'use client';
+
+import { useState } from 'react';
 import { Feature } from '@/types';
 import InfoTooltip from './InfoTooltip';
+import { voteForFeature } from '@/app/actions/features';
 import { 
-  ArrowUp,
-  Video, Magnet, Hash, Lightbulb, FileText, Calendar, 
-  FileQuestion, GraduationCap, Gamepad2, Sparkles, 
-  Camera, BrainCircuit, MessageSquare, Database, 
-  Code2, Map, Globe, Palette, Film, Smartphone
+  ArrowUp, Video, Magnet, Hash, Lightbulb, FileText, Calendar, 
+  FileQuestion, GraduationCap, Gamepad2, Sparkles, Camera, BrainCircuit, 
+  MessageSquare, Database, Code2, Map, Globe, Palette, Film, Smartphone,
+  Image, Network, TrendingUp, LayoutDashboard, Utensils, Users, Clock,
+  Target, Plane, List, Wallet, GitMerge, Folder, Smile, User, Music,
+  ScrollText, Languages
 } from 'lucide-react';
 
 const iconMap: Record<string, any> = {
-  Video, Magnet, Hash, Lightbulb, FileText, Calendar, 
-  FileQuestion, GraduationCap, Gamepad2, Sparkles, 
-  Camera, BrainCircuit, MessageSquare, Database, 
-  Code2, Map, Globe, Palette, Film, Smartphone
+  Video, Magnet, Hash, Lightbulb, FileText, Calendar, FileQuestion, GraduationCap, 
+  Gamepad2, Sparkles, Camera, BrainCircuit, MessageSquare, Database, Code2, Map, 
+  Globe, Palette, Film, Smartphone, Image, Network, TrendingUp, LayoutDashboard, 
+  Utensils, Users, Clock, Target, Plane, List, Wallet, GitMerge, Folder, Smile, 
+  User, Music, ScrollText, Languages
 };
 
 export default function FeatureCard({ feature, onVote }: { feature: Feature, onVote?: () => void }) {
   const Icon = iconMap[feature.icon] || Sparkles;
+
+  const [localVotes, setLocalVotes] = useState(feature.votes);
+  const [hasVoted, setHasVoted] = useState(feature.user_has_voted);
+
+  const handleVoteClick = async () => {
+    if (onVote) {
+      onVote(); // If controlled by parent (like RoadmapBoard)
+      return;
+    }
+
+    if (hasVoted) return;
+
+    // Optimistic internal state update
+    setLocalVotes(prev => prev + 1);
+    setHasVoted(true);
+
+    try {
+      await voteForFeature(feature.id);
+    } catch (e: any) {
+      setLocalVotes(prev => prev - 1);
+      setHasVoted(false);
+      alert(e.message);
+    }
+  };
 
   // Render different styles based on status
   const isLabs = feature.status === 'Labs';
@@ -38,6 +68,10 @@ export default function FeatureCard({ feature, onVote }: { feature: Feature, onV
   } else {
     badgeColor = 'bg-green-500/20 text-green-400 border border-green-500/30';
   }
+
+  // If controlled by parent, use feature props, else use local state
+  const displayVotes = onVote ? feature.votes : localVotes;
+  const displayVoted = onVote ? feature.user_has_voted : hasVoted;
 
   return (
     <div className={`relative p-5 rounded-2xl bg-white/5 backdrop-blur-md border transition-all duration-300 group ${borderGlow} flex flex-col h-full`}>
@@ -84,11 +118,15 @@ export default function FeatureCard({ feature, onVote }: { feature: Feature, onV
           {feature.category}
         </span>
         <button 
-          onClick={onVote}
-          className="group/vote flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-neon-blue/10 text-gray-300 hover:text-neon-blue transition-colors border border-white/5 hover:border-neon-blue/30 text-sm font-medium relative overflow-hidden"
+          onClick={handleVoteClick}
+          className={`group/vote flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-colors border text-sm font-medium relative overflow-hidden ${
+            displayVoted 
+              ? 'bg-neon-blue/20 text-neon-blue border-neon-blue/50'
+              : 'bg-white/5 hover:bg-neon-blue/10 text-gray-300 hover:text-neon-blue border-white/5 hover:border-neon-blue/30'
+          }`}
         >
-          <ArrowUp className="w-4 h-4 group-hover/vote:-translate-y-0.5 transition-transform" />
-          <span className="relative z-10">{feature.votes.toLocaleString()}</span>
+          <ArrowUp className={`w-4 h-4 transition-transform ${displayVoted ? '' : 'group-hover/vote:-translate-y-0.5'}`} />
+          <span className="relative z-10">{displayVotes.toLocaleString()}</span>
         </button>
       </div>
     </div>

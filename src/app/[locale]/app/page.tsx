@@ -1,6 +1,6 @@
-import { featuresData } from '@/data/features';
-import FeatureCard from '@/components/ui/FeatureCard';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { getFeatures } from '@/app/actions/features';
+import FeatureCard from '@/components/ui/FeatureCard';
 
 export default async function AppDashboard({params}: {params: Promise<{locale: string}>}) {
   const { locale } = await params;
@@ -8,10 +8,11 @@ export default async function AppDashboard({params}: {params: Promise<{locale: s
   const t = await getTranslations('Dashboard');
 
   // Group features by status for the main dashboard view
-  const availableFeatures = featuresData.filter(f => f.status === 'Available');
-  const devFeatures = featuresData.filter(f => f.status === 'In Development');
-  const labsFeatures = featuresData.filter(f => f.status === 'Labs');
-  const visionFeatures = featuresData.filter(f => f.status === 'Vision');
+  const allFeatures = await getFeatures();
+  const availableFeatures = allFeatures.filter(f => f.status === 'Available');
+  const devFeatures = allFeatures.filter(f => f.status === 'In Development');
+  const labsFeatures = allFeatures.filter(f => f.status === 'Labs');
+  const visionFeatures = allFeatures.filter(f => f.status === 'Vision');
 
   return (
     <div className="p-8 pb-24">

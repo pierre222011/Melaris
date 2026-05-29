@@ -27,4 +27,5 @@ export interface Feature {
   status: FeatureStatus;
   progress?: number; // Only for 'In Development'
   votes: number;
+  user_has_voted?: boolean; // Added for Supabase integration
 }

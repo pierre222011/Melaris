@@ -4,12 +4,14 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Command, X, ArrowRight } from 'lucide-react';
 import { useRouter } from '@/i18n/routing';
-import { featuresData } from '@/data/features';
+import { Feature } from '@/types';
 import { CATEGORIES } from '@/components/layout/Sidebar';
 
 export default function GlobalSearch() {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState('');
+  const [allFeatures, setAllFeatures] = useState<Feature[]>([]);
+  const [loaded, setLoaded] = useState(false);
   const router = useRouter();
 
   // Handle Cmd+K / Ctrl+K
@@ -25,10 +27,23 @@ export default function GlobalSearch() {
     return () => document.removeEventListener('keydown', down);
   }, []);
 
+  // Fetch features from API when modal opens
+  useEffect(() => {
+    if (isOpen && !loaded) {
+      fetch('/api/features')
+        .then(res => res.json())
+        .then(data => {
+          setAllFeatures(data);
+          setLoaded(true);
+        })
+        .catch(err => console.error('Failed to load features for search', err));
+    }
+  }, [isOpen, loaded]);
+
   // Filter results
   const q = query.toLowerCase();
   const filteredFeatures = q 
-    ? featuresData.filter(f => f.title.toLowerCase().includes(q) || f.description.toLowerCase().includes(q))
+    ? allFeatures.filter(f => f.title.toLowerCase().includes(q) || f.description.toLowerCase().includes(q))
     : [];
   
   const filteredCategories = q
