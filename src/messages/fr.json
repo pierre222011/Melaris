@@ -1,9 +1,56 @@
 {
   "Index": {
     "title": "Construisez le futur de l'IA avec Melaris",
-    "subtitle": "Une plateforme SaaS futuriste et premium conçue pour les startups IA modernes. Évolutive, multilingue et magnifique.",
+    "subtitle": "Une plateforme SaaS premium et futuriste conçue pour les startups IA modernes. Évolutive, multilingue et spectaculaire.",
     "cta_primary": "Commencer",
     "cta_secondary": "Voir les fonctionnalités"
+  },
+  "Sidebar": {
+    "Dashboard": "Tableau de bord",
+    "Roadmap": "Feuille de route",
+    "All Categories": "Toutes les catégories",
+    "Gaming": "Jeux vidéo",
+    "Fortnite": "Fortnite",
+    "Roblox": "Roblox",
+    "Minecraft": "Minecraft",
+    "Education": "Éducation",
+    "Productivity": "Productivité",
+    "Discord Tools": "Outils Discord",
+    "AI Video": "Vidéo IA",
+    "Real Life Tools": "Outils du quotidien",
+    "Storytelling": "Écriture / Histoires",
+    "Labs": "Labo Expérimental",
+    "Vision": "Vision",
+    "Search": "Rechercher...",
+    "Platform Status": "État de la plateforme",
+    "All systems operational": "Tous les systèmes sont opérationnels"
+  },
+  "Pricing": {
+    "Title": "Tarification simple et transparente",
+    "Subtitle": "Choisissez le plan qui vous correspond le mieux. Modifiez votre abonnement à tout moment.",
+    "Most Popular": "Le plus populaire",
+    "Free_desc": "Parfait pour commencer et explorer la plateforme.",
+    "Free_feat_1": "Accès aux outils basiques",
+    "Free_feat_2": "Votes quotidiens limités",
+    "Free_cta": "Commencer",
+    "Premium_desc": "Débloquez tout le potentiel des outils IA de Melaris.",
+    "Premium_feat_1": "Accès illimité à tous les outils",
+    "Premium_feat_2": "Générations IA avancées",
+    "Premium_feat_3": "Accès anticipé aux nouveautés",
+    "Premium_cta": "Passer au Premium",
+    "Supporter_desc": "Soutenez le projet et obtenez des avantages exclusifs.",
+    "Supporter_feat_1": "Pouvoir de vote x10",
+    "Supporter_feat_2": "Badge exclusif Supporter",
+    "Supporter_feat_3": "Accès anticipé à tout",
+    "Supporter_cta": "Devenir Supporter"
+  },
+  "Roadmap": {
+    "All": "Tout",
+    "In Development": "En Développement",
+    "Labs": "Labo",
+    "Vision": "Vision",
+    "Trending": "Tendances",
+    "Progress": "Progression"
   },
   "Navigation": {
     "features": "Fonctionnalités",
@@ -34,5 +81,227 @@
     "experimental": "Laboratoires Expérimentaux",
     "unstable": "Hautement Instable",
     "future_vision": "Vision du Futur"
+  },
+  "Features": {
+    "minecraft_story_map_generator": {
+      "title": "Générateur de Maps Histoire Minecraft",
+      "description": "Générateur de maps Minecraft basé sur une histoire écrite.",
+      "tooltip": "Utilise des LLM pour analyser les arcs narratifs et générer des commandes."
+    },
+    "minecraft_rp_quest_ai": {
+      "title": "IA Quêtes Minecraft RP",
+      "description": "IA qui crée automatiquement des quêtes Minecraft RP.",
+      "tooltip": "Génère dynamiquement des PNJ, des dialogues et des objectifs cohérents."
+    },
+    "hd_minecraft_skin_ai": {
+      "title": "IA Skins Minecraft HD",
+      "description": "IA qui transforme un skin Minecraft en skin HD réaliste.",
+      "tooltip": "Utilise des modèles de diffusion pour upscaler le pixel art en 3D haute résolution."
+    },
+    "minecraft_build_to_tutorial": {
+      "title": "Tuto de Construction Minecraft",
+      "description": "Transforme des captures d'écran de constructions en tutoriel étape par étape.",
+      "tooltip": "L'IA visuelle analyse les couches de blocs pour créer un guide."
+    },
+    "roblox_lua_assistant": {
+      "title": "Assistant Lua Roblox",
+      "description": "Assistant Roblox Studio qui corrige les scripts Lua automatiquement.",
+      "tooltip": "Entraîné sur l'API Roblox pour déboguer et optimiser le code Luau."
+    },
+    "discord_to_wiki": {
+      "title": "Discord vers Wiki",
+      "description": "Site qui transforme un serveur Discord gaming en wiki automatique.",
+      "tooltip": "Scrape les messages épinglés et les FAQ pour créer une base de connaissances."
+    },
+    "discord_event_creator": {
+      "title": "Créateur d'Événements Discord",
+      "description": "Créateur automatique d'événements pour serveurs Discord.",
+      "tooltip": "Analyse l'activité du serveur pour proposer et planifier des événements communautaires."
+    },
+    "funny_discord_summarizer": {
+      "title": "Résumé Discord Humoristique",
+      "description": "IA qui transforme les conversations Discord en résumé drôle.",
+      "tooltip": "Utilise le NLP pour extraire les blagues et moments clés de l'historique."
+    },
+    "gaming_thumbnail_ai": {
+      "title": "IA Miniatures Gaming",
+      "description": "IA qui crée des miniatures YouTube gaming cohérentes avec le gameplay.",
+      "tooltip": "Extrait les meilleures scènes d'action et applique un style optimisé pour le clic."
+    },
+    "custom_fortnite_challenges": {
+      "title": "Défis Fortnite Sur Mesure",
+      "description": "IA qui propose des défis Fortnite personnalisés.",
+      "tooltip": "Génère des règles et des lieux de drop pour votre prochain stream."
+    },
+    "gaming_inspiration_assistant": {
+      "title": "Assistant Inspiration Gaming",
+      "description": "Assistant \"anti-panne d'inspiration\" pour créateurs gaming.",
+      "tooltip": "Croise les jeux tendance avec votre style pour suggérer du contenu."
+    },
+    "npc_dialogue_generator": {
+      "title": "Générateur de Dialogues PNJ",
+      "description": "IA qui génère automatiquement des dialogues de PNJ.",
+      "tooltip": "Se connecte à un LLM local pour générer des arbres de dialogue contextuels."
+    },
+    "ultra_short_notes_generator": {
+      "title": "Générateur de Fiches Ultra-Courtes",
+      "description": "Générateur de fiches de révision ultra-courtes pour collégiens.",
+      "tooltip": "Simplifie les concepts complexes en 3 points clés maximum."
+    },
+    "pdf_to_quiz": {
+      "title": "PDF vers Quiz",
+      "description": "Site qui transforme un PDF en quiz interactif.",
+      "tooltip": "Extrait les faits clés et génère des questions à choix multiples."
+    },
+    "homework_explainer_ai": {
+      "title": "IA Explicateur de Devoirs",
+      "description": "IA qui explique les devoirs niveau collège/lycée.",
+      "tooltip": "IA socratique qui guide l'élève sans donner les réponses directes."
+    },
+    "auto_mind_maps": {
+      "title": "Cartes Mentales Auto",
+      "description": "IA qui crée des cartes mentales automatiques.",
+      "tooltip": "Analyse le texte pour construire des cartes relationnelles visuelles."
+    },
+    "lesson_to_interactive_game": {
+      "title": "Leçon vers Jeu Interactif",
+      "description": "Site qui transforme une leçon en jeu interactif.",
+      "tooltip": "Génère des mini-jeux web basés sur des faits historiques ou des formules."
+    },
+    "auto_test_creator": {
+      "title": "Créateur de Contrôles Auto",
+      "description": "Site qui crée des contrôles scolaires automatiquement.",
+      "tooltip": "Génère des examens équilibrés avec différents niveaux de difficulté."
+    },
+    "photo_to_mcq": {
+      "title": "Photo vers QCM",
+      "description": "Générateur de QCM à partir d'une photo.",
+      "tooltip": "Utilise l'IA visuelle pour lire les manuels et générer des questions."
+    },
+    "adhd_dyslexia_rewriter": {
+      "title": "Réécrivain TDAH/Dyslexie",
+      "description": "IA qui réécrit les cours pour TDAH/dyslexie.",
+      "tooltip": "Applique la lecture bionique et découpe les murs de texte en parties digestes."
+    },
+    "custom_mock_exams": {
+      "title": "Examens Blancs Sur Mesure",
+      "description": "Générateur de devoirs blancs personnalisés.",
+      "tooltip": "S'adapte aux faiblesses de l'élève pour générer un entraînement ciblé."
+    },
+    "auto_file_organizer": {
+      "title": "Organiseur de Fichiers Auto",
+      "description": "IA qui organise les fichiers automatiquement.",
+      "tooltip": "Trie votre bureau et vos documents en analysant leur contenu."
+    },
+    "idea_to_30_shorts": {
+      "title": "Une Idée vers 30 Shorts",
+      "description": "Site qui transforme une idée en 30 scripts de Shorts.",
+      "tooltip": "Applique des structures virales pour générer un mois de contenu."
+    },
+    "meta_creator_assistant": {
+      "title": "Assistant Créateur Meta",
+      "description": "Assistant qui crée miniatures + titres + hashtags cohérents.",
+      "tooltip": "Génération de packages optimisés pour le SEO et les clics."
+    },
+    "infinite_youtube_ideas": {
+      "title": "Idées YouTube Infinies",
+      "description": "Générateur d'idées YouTube infinies par niche.",
+      "tooltip": "Analyse votre audience pour trouver des sujets inexploités."
+    },
+    "tiktok_trend_assistant": {
+      "title": "Assistant Tendances TikTok",
+      "description": "Assistant TikTok basé sur les tendances en temps réel.",
+      "tooltip": "Scrape les audios et formats tendances avant qu'ils ne s'essoufflent."
+    },
+    "optimized_yt_descriptions": {
+      "title": "Descriptions YT Optimisées",
+      "description": "Site qui génère des descriptions YouTube optimisées.",
+      "tooltip": "Inclut des chapitres, des mots-clés SEO et le formatage des liens d'affiliation."
+    },
+    "viral_potential_predictor": {
+      "title": "Prédicteur de Potentiel Viral",
+      "description": "IA qui prédit le potentiel viral d'une vidéo.",
+      "tooltip": "Analyse le rythme, la rétention et la force de l'accroche."
+    },
+    "auto_content_calendar": {
+      "title": "Calendrier de Contenu Auto",
+      "description": "Site qui crée un calendrier de contenu automatique.",
+      "tooltip": "Répartit les piliers de contenu sur la semaine pour une portée maximale."
+    },
+    "room_setup_organizer_ai": {
+      "title": "IA Organiseur de Setup",
+      "description": "IA qui aide à organiser une chambre ou un setup gaming.",
+      "tooltip": "Uploadez une photo et obtenez un plan 3D du placement optimal."
+    },
+    "fridge_to_recipes": {
+      "title": "Frigo vers Recettes",
+      "description": "Site qui transforme une photo de frigo en recettes.",
+      "tooltip": "Identifie les ingrédients et suggère des repas avec ce que vous avez."
+    },
+    "family_organizer_assistant": {
+      "title": "Assistant Organiseur Familial",
+      "description": "Assistant d'organisation pour parents/enfants.",
+      "tooltip": "Synchronise les emplois du temps et gamifie les tâches ménagères."
+    },
+    "custom_routine_ai": {
+      "title": "IA Routine Sur Mesure",
+      "description": "IA qui crée des routines personnalisées.",
+      "tooltip": "S'adapte à votre chronotype et à votre niveau d'énergie."
+    },
+    "goals_to_mini_missions": {
+      "title": "Objectifs vers Mini-Missions",
+      "description": "Site qui transforme les objectifs en mini-missions.",
+      "tooltip": "Applique les mécaniques des RPG à la productivité réelle."
+    },
+    "ultra_simplified_travel_ai": {
+      "title": "IA Voyage Ultra-Simplifiée",
+      "description": "Assistant de voyage ultra-simplifié.",
+      "tooltip": "Génère des itinéraires jour par jour selon l'ambiance et le budget."
+    },
+    "auto_list_generator": {
+      "title": "Générateur de Listes Auto",
+      "description": "Générateur automatique de listes.",
+      "tooltip": "Listes de bagages, courses, toutes générées selon le contexte."
+    },
+    "budget_weekend_planner": {
+      "title": "Planificateur Week-end Budget",
+      "description": "IA qui planifie un week-end selon un budget.",
+      "tooltip": "Trouve des activités et transports strictement dans vos limites."
+    },
+    "goal_progression_tree": {
+      "title": "Arbre de Progression d'Objectifs",
+      "description": "IA qui transforme les objectifs en arbre de progression.",
+      "tooltip": "Cartographie visuelle de compétences pour le développement personnel."
+    },
+    "budget_family_menus": {
+      "title": "Menus Familiaux Budget",
+      "description": "IA qui crée des menus selon le budget familial.",
+      "tooltip": "Optimise la nutrition par euro dépensé."
+    },
+    "friend_challenges": {
+      "title": "Défis Entre Amis",
+      "description": "Site qui génère des défis entre amis.",
+      "tooltip": "Gages et paris personnalisés selon la dynamique du groupe."
+    },
+    "story_character_ai": {
+      "title": "IA Personnages d'Histoire",
+      "description": "IA qui crée des personnages cohérents pour des histoires.",
+      "tooltip": "Maintient des bibles de personnages avec des profils psychologiques profonds."
+    },
+    "song_to_visual_universe": {
+      "title": "Chanson vers Univers Visuel",
+      "description": "Site qui transforme une chanson en univers visuel.",
+      "tooltip": "Analyse les paroles pour générer un moodboard et un lore."
+    },
+    "text_to_rpg_quest": {
+      "title": "Texte vers Quête RPG",
+      "description": "Site qui transforme un texte en quête RPG.",
+      "tooltip": "Aventures textuelles jouables générées à partir d'un prompt."
+    },
+    "simple_conlang_gen": {
+      "title": "Générateur de Langues",
+      "description": "Générateur de langues fictives simples.",
+      "tooltip": "Crée une phonologie, un vocabulaire et des règles de grammaire."
+    }
   }
 }

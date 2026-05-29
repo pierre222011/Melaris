@@ -6,10 +6,13 @@ import { Feature } from '@/types';
 import FeatureCard from './FeatureCard';
 import { voteForFeature } from '@/app/actions/features';
 
+import { useTranslations } from 'next-intl';
+
 export default function RoadmapBoard({ initialFeatures }: { initialFeatures: Feature[] }) {
   const [features, setFeatures] = useState<Feature[]>(initialFeatures);
   const [sortBy, setSortBy] = useState<'votes' | 'progress'>('votes');
   const [filterStatus, setFilterStatus] = useState<string>('All');
+  const t = useTranslations('Roadmap');
 
   const handleVote = async (id: string) => {
     // Check if already voted to prevent unnecessary network requests
@@ -66,7 +69,7 @@ export default function RoadmapBoard({ initialFeatures }: { initialFeatures: Fea
                   : 'bg-white/5 text-gray-400 border border-white/10 hover:bg-white/10'
               }`}
             >
-              {status}
+              {t(status)}
             </button>
           ))}
         </div>
@@ -78,7 +81,7 @@ export default function RoadmapBoard({ initialFeatures }: { initialFeatures: Fea
               sortBy === 'votes' ? 'bg-white/10 text-white' : 'text-gray-400 hover:text-white'
             }`}
           >
-            Trending
+            {t('Trending')}
           </button>
           <button
             onClick={() => setSortBy('progress')}
@@ -86,7 +89,7 @@ export default function RoadmapBoard({ initialFeatures }: { initialFeatures: Fea
               sortBy === 'progress' ? 'bg-white/10 text-white' : 'text-gray-400 hover:text-white'
             }`}
           >
-            Progress
+            {t('Progress')}
           </button>
         </div>
       </div>

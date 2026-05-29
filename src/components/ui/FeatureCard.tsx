@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import { Feature } from '@/types';
 import InfoTooltip from './InfoTooltip';
@@ -23,6 +24,22 @@ const iconMap: Record<string, any> = {
 
 export default function FeatureCard({ feature, onVote }: { feature: Feature, onVote?: () => void }) {
   const Icon = iconMap[feature.icon] || Sparkles;
+  const t = useTranslations('Features');
+  
+  const transKey = feature.title.toLowerCase().replace(/[^a-z0-9]/g, '_');
+  
+  // Use translations if available, otherwise fallback to DB text
+  let translatedTitle = feature.title;
+  let translatedDesc = feature.description;
+  let translatedTooltip = feature.tooltipText;
+  
+  try {
+    translatedTitle = t(`${transKey}.title`);
+    translatedDesc = t(`${transKey}.description`);
+    translatedTooltip = t(`${transKey}.tooltip`);
+  } catch (e) {
+    // Fallback to original DB string if translation is missing
+  }
 
   const [localVotes, setLocalVotes] = useState(feature.votes);
   const [hasVoted, setHasVoted] = useState(feature.user_has_voted);
@@ -89,12 +106,12 @@ export default function FeatureCard({ feature, onVote }: { feature: Feature, onV
       <div className="flex-1">
         <div className="flex items-center gap-2 mb-2">
           <h3 className="font-syne font-bold text-lg text-white group-hover:text-neon-blue transition-colors">
-            {feature.title}
+            {translatedTitle}
           </h3>
-          <InfoTooltip text={feature.tooltipText} />
+          <InfoTooltip text={translatedTooltip} />
         </div>
         <p className="text-sm text-gray-400 line-clamp-2 mb-4">
-          {feature.description}
+          {translatedDesc}
         </p>
       </div>
 

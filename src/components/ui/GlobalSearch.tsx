@@ -1,5 +1,7 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Command, X, ArrowRight } from 'lucide-react';
@@ -155,26 +157,36 @@ export default function GlobalSearch() {
                     <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">
                       AI Tools & Features
                     </div>
-                    {filteredFeatures.map(feature => (
-                      <button
-                        key={feature.id}
-                        onClick={() => handleSelect(feature.status === 'Vision' || feature.status === 'Labs' ? '/app/labs' : '/app')}
-                        className="w-full flex flex-col px-3 py-3 rounded-xl hover:bg-white/5 text-left group transition-colors mb-1"
-                      >
-                        <div className="flex items-center justify-between mb-1">
-                          <span className="text-gray-300 group-hover:text-white font-medium">{feature.title}</span>
-                          <span className={`text-[10px] px-2 py-0.5 rounded-full border ${
-                            feature.status === 'Available' ? 'border-green-500/30 text-green-400 bg-green-500/10' :
-                            feature.status === 'Labs' ? 'border-orange-500/30 text-orange-400 bg-orange-500/10' :
-                            feature.status === 'Vision' ? 'border-purple-500/30 text-purple-400 bg-purple-500/10' :
-                            'border-blue-500/30 text-blue-400 bg-blue-500/10'
-                          }`}>
-                            {feature.status}
-                          </span>
-                        </div>
-                        <p className="text-xs text-gray-500 line-clamp-1">{feature.description}</p>
-                      </button>
-                    ))}
+                    {filteredFeatures.map(feature => {
+                      const transKey = feature.title.toLowerCase().replace(/[^a-z0-9]/g, '_');
+                      let tTitle = feature.title;
+                      let tDesc = feature.description;
+                      try {
+                        tTitle = t(`${transKey}.title`);
+                        tDesc = t(`${transKey}.description`);
+                      } catch (e) {}
+
+                      return (
+                        <button
+                          key={feature.id}
+                          onClick={() => handleSelect(feature.status === 'Vision' || feature.status === 'Labs' ? '/app/labs' : '/app')}
+                          className="w-full flex flex-col px-3 py-3 rounded-xl hover:bg-white/5 text-left group transition-colors mb-1"
+                        >
+                          <div className="flex items-center justify-between mb-1">
+                            <span className="text-gray-300 group-hover:text-white font-medium">{tTitle}</span>
+                            <span className={`text-[10px] px-2 py-0.5 rounded-full border ${
+                              feature.status === 'Available' ? 'border-green-500/30 text-green-400 bg-green-500/10' :
+                              feature.status === 'Labs' ? 'border-orange-500/30 text-orange-400 bg-orange-500/10' :
+                              feature.status === 'Vision' ? 'border-purple-500/30 text-purple-400 bg-purple-500/10' :
+                              'border-blue-500/30 text-blue-400 bg-blue-500/10'
+                            }`}>
+                              {feature.status}
+                            </span>
+                          </div>
+                          <p className="text-xs text-gray-500 line-clamp-1">{tDesc}</p>
+                        </button>
+                      );
+                    })}
                   </div>
                 )}
               </div>

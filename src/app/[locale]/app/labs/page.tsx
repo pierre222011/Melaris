@@ -2,6 +2,8 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getFeatures } from '@/app/actions/features';
 import LabsCard from '@/components/ui/LabsCard';
 
+export const dynamic = 'force-dynamic';
+
 export default async function LabsPage({params}: {params: Promise<{locale: string}>}) {
   const { locale } = await params;
   setRequestLocale(locale);

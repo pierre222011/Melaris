@@ -5,6 +5,53 @@
     "cta_primary": "Get Started",
     "cta_secondary": "View Features"
   },
+  "Sidebar": {
+    "Dashboard": "Dashboard",
+    "Roadmap": "Roadmap",
+    "All Categories": "All Categories",
+    "Gaming": "Gaming",
+    "Fortnite": "Fortnite",
+    "Roblox": "Roblox",
+    "Minecraft": "Minecraft",
+    "Education": "Education",
+    "Productivity": "Productivity",
+    "Discord Tools": "Discord Tools",
+    "AI Video": "AI Video",
+    "Real Life Tools": "Real Life Tools",
+    "Storytelling": "Storytelling",
+    "Labs": "Labs",
+    "Vision": "Vision",
+    "Search": "Search...",
+    "Platform Status": "Platform Status",
+    "All systems operational": "All systems operational"
+  },
+  "Pricing": {
+    "Title": "Simple, transparent pricing",
+    "Subtitle": "Choose the plan that best fits your needs. Upgrade or downgrade at any time.",
+    "Most Popular": "Most Popular",
+    "Free_desc": "Perfect to get started and explore the platform.",
+    "Free_feat_1": "Access to basic tools",
+    "Free_feat_2": "Limited daily votes",
+    "Free_cta": "Get Started",
+    "Premium_desc": "Unlock the full potential of Melaris AI tools.",
+    "Premium_feat_1": "Unlimited access to all tools",
+    "Premium_feat_2": "Advanced AI generations",
+    "Premium_feat_3": "Beta access to new features",
+    "Premium_cta": "Upgrade to Premium",
+    "Supporter_desc": "Support the project and get exclusive perks.",
+    "Supporter_feat_1": "10x more voting power",
+    "Supporter_feat_2": "Exclusive Supporter Badge",
+    "Supporter_feat_3": "Early access to everything",
+    "Supporter_cta": "Become a Supporter"
+  },
+  "Roadmap": {
+    "All": "All",
+    "In Development": "In Development",
+    "Labs": "Labs",
+    "Vision": "Vision",
+    "Trending": "Trending",
+    "Progress": "Progress"
+  },
   "Navigation": {
     "features": "Features",
     "pricing": "Pricing",
@@ -34,5 +81,227 @@
     "experimental": "Experimental Labs",
     "unstable": "Highly Unstable",
     "future_vision": "Future Vision"
+  },
+  "Features": {
+    "minecraft_story_map_generator": {
+      "title": "Minecraft Story Map Generator",
+      "description": "Minecraft map generator based on a written story.",
+      "tooltip": "Uses LLMs to parse narrative arcs into command block sequences and world generation seeds."
+    },
+    "minecraft_rp_quest_ai": {
+      "title": "Minecraft RP Quest AI",
+      "description": "AI that automatically creates Minecraft RP quests.",
+      "tooltip": "Dynamically generates lore-accurate NPCs, dialogue trees, and objectives."
+    },
+    "hd_minecraft_skin_ai": {
+      "title": "HD Minecraft Skin AI",
+      "description": "AI that transforms a Minecraft skin into a realistic HD skin.",
+      "tooltip": "Uses diffusion models to upscale 64x64 pixel art into high-res 3D textures."
+    },
+    "minecraft_build_to_tutorial": {
+      "title": "Minecraft Build to Tutorial",
+      "description": "Turns screenshots of Minecraft builds into a step-by-step tutorial.",
+      "tooltip": "Vision AI analyzes block placement layers to generate a block-by-block guide."
+    },
+    "roblox_lua_assistant": {
+      "title": "Roblox Lua Assistant",
+      "description": "Roblox Studio assistant that automatically fixes Lua scripts.",
+      "tooltip": "Trained on the Roblox API to debug and optimize Luau code."
+    },
+    "discord_to_wiki": {
+      "title": "Discord to Wiki",
+      "description": "Site that transforms a gaming Discord server into an automatic wiki.",
+      "tooltip": "Scrapes pinned messages and FAQ channels to build a searchable knowledge base."
+    },
+    "discord_event_creator": {
+      "title": "Discord Event Creator",
+      "description": "Automatic event creator for Discord servers.",
+      "tooltip": "Analyzes server activity to propose and schedule community events."
+    },
+    "funny_discord_summarizer": {
+      "title": "Funny Discord Summarizer",
+      "description": "IA that transforms Discord conversations into a funny summary.",
+      "tooltip": "Uses NLP to extract inside jokes and key moments from a chat history."
+    },
+    "gaming_thumbnail_ai": {
+      "title": "Gaming Thumbnail AI",
+      "description": "IA that creates gaming YouTube thumbnails coherent with gameplay.",
+      "tooltip": "Extracts the most action-packed frames and applies CTR-optimized styling."
+    },
+    "custom_fortnite_challenges": {
+      "title": "Custom Fortnite Challenges",
+      "description": "IA that proposes personalized Fortnite challenges.",
+      "tooltip": "Generates rule sets and drop locations for your next stream."
+    },
+    "gaming_inspiration_assistant": {
+      "title": "Gaming Inspiration Assistant",
+      "description": "\"Anti lack of inspiration\" assistant for gaming creators.",
+      "tooltip": "Cross-references trending games with your channel style to suggest content."
+    },
+    "npc_dialogue_generator": {
+      "title": "NPC Dialogue Generator",
+      "description": "IA that automatically generates NPC dialogues.",
+      "tooltip": "Connects to a local LLM to generate context-aware branching dialogue trees."
+    },
+    "ultra_short_notes_generator": {
+      "title": "Ultra-Short Notes Generator",
+      "description": "Generator of ultra-short summary sheets for middle schoolers.",
+      "tooltip": "Simplifies complex concepts into 3 bullet points max."
+    },
+    "pdf_to_quiz": {
+      "title": "PDF to Quiz",
+      "description": "Site that transforms a PDF into an interactive quiz.",
+      "tooltip": "Extracts key facts and generates multiple-choice questions."
+    },
+    "homework_explainer_ai": {
+      "title": "Homework Explainer AI",
+      "description": "IA that explains homework at a middle/high school level.",
+      "tooltip": "Socratic method AI that guides the student without giving direct answers."
+    },
+    "auto_mind_maps": {
+      "title": "Auto Mind Maps",
+      "description": "IA that creates automatic mind maps.",
+      "tooltip": "Parses text to build visual node-based relationship maps."
+    },
+    "lesson_to_interactive_game": {
+      "title": "Lesson to Interactive Game",
+      "description": "Site that transforms a lesson into an interactive game.",
+      "tooltip": "Generates web-based mini-games based on historical facts or math formulas."
+    },
+    "auto_test_creator": {
+      "title": "Auto Test Creator",
+      "description": "Site that creates school tests automatically.",
+      "tooltip": "Generates balanced exams with varying difficulty levels."
+    },
+    "photo_to_mcq": {
+      "title": "Photo to MCQ",
+      "description": "MCQ generator from a photo.",
+      "tooltip": "Uses Vision AI to read textbook pages and generate questions."
+    },
+    "adhd_dyslexia_rewriter": {
+      "title": "ADHD/Dyslexia Rewriter",
+      "description": "IA that rewrites courses for ADHD/dyslexia.",
+      "tooltip": "Applies bionic reading and breaks walls of text into digestible parts."
+    },
+    "custom_mock_exams": {
+      "title": "Custom Mock Exams",
+      "description": "Generator of personalized mock homework.",
+      "tooltip": "Adapts to the student\\"
+    },
+    "auto_file_organizer": {
+      "title": "Auto File Organizer",
+      "description": "IA that organizes files automatically.",
+      "tooltip": "Sorts your desktop and documents based on content analysis."
+    },
+    "idea_to_30_shorts": {
+      "title": "Idea to 30 Shorts",
+      "description": "Site that transforms an idea into 30 Shorts scripts.",
+      "tooltip": "Applies viral hook frameworks to generate a month of content."
+    },
+    "meta_creator_assistant": {
+      "title": "Meta Creator Assistant",
+      "description": "Assistant that creates coherent thumbnails + titles + hashtags.",
+      "tooltip": "SEO and CTR optimized package generation."
+    },
+    "infinite_youtube_ideas": {
+      "title": "Infinite YouTube Ideas",
+      "description": "Infinite YouTube ideas generator by niche.",
+      "tooltip": "Analyzes your audience overlap to find untapped topics."
+    },
+    "tiktok_trend_assistant": {
+      "title": "TikTok Trend Assistant",
+      "description": "TikTok assistant based on real-time trends.",
+      "tooltip": "Scrapes trending audio and formats before they peak."
+    },
+    "optimized_yt_descriptions": {
+      "title": "Optimized YT Descriptions",
+      "description": "Site that generates optimized YouTube descriptions.",
+      "tooltip": "Includes timestamps, SEO keywords, and affiliate link formatting."
+    },
+    "viral_potential_predictor": {
+      "title": "Viral Potential Predictor",
+      "description": "IA that predicts the viral potential of a video.",
+      "tooltip": "Analyzes pacing, retention curves, and hook strength."
+    },
+    "auto_content_calendar": {
+      "title": "Auto Content Calendar",
+      "description": "Site that creates an automatic content calendar.",
+      "tooltip": "Distributes content pillars across the week for maximum reach."
+    },
+    "room_setup_organizer_ai": {
+      "title": "Room/Setup Organizer AI",
+      "description": "IA that helps organize a room or gaming setup.",
+      "tooltip": "Upload a photo and get a 3D overlay of optimal furniture placement."
+    },
+    "fridge_to_recipes": {
+      "title": "Fridge to Recipes",
+      "description": "Site that transforms a photo of a fridge into recipes.",
+      "tooltip": "Identifies ingredients and suggests meals based on what you have."
+    },
+    "family_organizer_assistant": {
+      "title": "Family Organizer Assistant",
+      "description": "Organization assistant for parents/children.",
+      "tooltip": "Syncs schedules and gamifies chores for kids."
+    },
+    "custom_routine_ai": {
+      "title": "Custom Routine AI",
+      "description": "IA that creates personalized routines.",
+      "tooltip": "Adapts to your chronotype and energy levels."
+    },
+    "goals_to_mini_missions": {
+      "title": "Goals to Mini-Missions",
+      "description": "Site that transforms objectives into mini missions.",
+      "tooltip": "Applies RPG mechanics to real-life productivity."
+    },
+    "ultra_simplified_travel_ai": {
+      "title": "Ultra-Simplified Travel AI",
+      "description": "Ultra-simplified travel assistant.",
+      "tooltip": "Generates day-by-day itineraries based on vibe and budget."
+    },
+    "auto_list_generator": {
+      "title": "Auto List Generator",
+      "description": "Automatic list generator.",
+      "tooltip": "Packing lists, grocery lists, all generated from context."
+    },
+    "budget_weekend_planner": {
+      "title": "Budget Weekend Planner",
+      "description": "IA that plans a weekend according to budget.",
+      "tooltip": "Finds activities and travel options strictly within limits."
+    },
+    "goal_progression_tree": {
+      "title": "Goal Progression Tree",
+      "description": "IA that transforms objectives into a progression tree.",
+      "tooltip": "Visual skill tree mapping for personal development."
+    },
+    "budget_family_menus": {
+      "title": "Budget Family Menus",
+      "description": "IA that creates menus according to family budget.",
+      "tooltip": "Optimizes nutrition per dollar."
+    },
+    "friend_challenges": {
+      "title": "Friend Challenges",
+      "description": "Site that generates challenges between friends.",
+      "tooltip": "Customized dares and bets based on friend group dynamics."
+    },
+    "story_character_ai": {
+      "title": "Story Character AI",
+      "description": "IA that creates coherent characters for stories.",
+      "tooltip": "Maintains character bibles with deep psychological profiles."
+    },
+    "song_to_visual_universe": {
+      "title": "Song to Visual Universe",
+      "description": "Site that transforms a song into a visual universe.",
+      "tooltip": "Analyzes lyrics and stems to generate a moodboard and lore."
+    },
+    "text_to_rpg_quest": {
+      "title": "Text to RPG Quest",
+      "description": "Site that transforms text into an RPG quest.",
+      "tooltip": "Playable text adventures generated from any prompt."
+    },
+    "simple_conlang_gen": {
+      "title": "Simple Conlang Gen",
+      "description": "Generator of simple fictional languages.",
+      "tooltip": "Creates phonology, vocabulary, and grammar rules for worldbuilding."
+    }
   }
 }

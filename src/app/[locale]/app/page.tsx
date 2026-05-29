@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getFeatures } from '@/app/actions/features';
 import FeatureCard from '@/components/ui/FeatureCard';

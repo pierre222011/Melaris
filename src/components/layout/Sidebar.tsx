@@ -27,8 +27,11 @@ export const CATEGORIES = [
   { name: 'Vision', icon: Eye, path: '/app/vision', exact: false },
 ];
 
+import { useTranslations } from 'next-intl';
+
 export default function Sidebar() {
   const pathname = usePathname();
+  const t = useTranslations('Sidebar');
 
   return (
     <aside className="w-64 h-screen fixed left-0 top-0 border-r border-white/10 bg-[#050816]/80 backdrop-blur-2xl flex flex-col z-40">
@@ -58,7 +61,7 @@ export default function Sidebar() {
               }`}
             >
               <Icon className={`w-5 h-5 ${isActive ? 'text-neon-blue' : 'text-gray-500 group-hover:text-gray-300'} transition-colors`} />
-              <span className="font-medium">{cat.name}</span>
+              <span className="font-medium">{t(cat.name)}</span>
             </Link>
           );
         })}
@@ -66,10 +69,10 @@ export default function Sidebar() {
 
       <div className="p-4 border-t border-white/10">
         <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-          <p className="text-xs text-gray-400 mb-2">Platform Status</p>
+          <p className="text-xs text-gray-400 mb-2">{t('Platform Status')}</p>
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            <span className="text-sm text-white font-medium">All systems operational</span>
+            <span className="text-sm text-white font-medium">{t('All systems operational')}</span>
           </div>
         </div>
       </div>
