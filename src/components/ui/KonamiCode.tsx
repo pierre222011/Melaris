@@ -14,6 +14,9 @@ export default function KonamiCode() {
     let typedKeys = '';
 
     const handleKeyDown = async (e: KeyboardEvent) => {
+      // Ignore modifier keys and special keys like Shift, Backspace, etc.
+      if (e.key.length !== 1) return;
+
       typedKeys += e.key.toLowerCase();
 
       // Keep only the last N characters

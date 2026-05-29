@@ -36,7 +36,7 @@ export async function grantAdminPrivileges() {
     cookieStore.set('melaris_dev_admin', 'true', { 
       maxAge: 60 * 60 * 24, // 1 day
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
+      secure: false, // In development, HTTPS is not guaranteed, so this is false
       sameSite: 'lax'
     });
 
