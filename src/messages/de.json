@@ -1,4 +1,5 @@
 {
+  "Sidebar": {
   "Index": {
     "title": "Gestalten Sie die Zukunft der KI mit Melaris",
     "subtitle": "Eine erstklassige, dunkel-futuristische SaaS-Plattform für moderne KI-Startups. Skalierbar, mehrsprachig und atemberaubend.",
@@ -37,4 +38,5 @@
   },
   
   "Sidebar": "Seitenleiste"
+}
 }

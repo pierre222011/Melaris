@@ -1,4 +1,5 @@
 {
+  "Sidebar": {
   "Index": {
     "title": "Build the future of AI with Melaris",
     "subtitle": "A premium, dark futuristic SaaS platform built for modern AI startups. Scalable, multilingual, and stunning.",
@@ -307,4 +308,5 @@
   },
 
   "Sidebar": "Sidebar"
+}
 }

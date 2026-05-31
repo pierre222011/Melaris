@@ -1,4 +1,5 @@
 {
+  "Sidebar": {
   "Index": {
     "title": "Construye el futuro de la IA con Melaris",
     "subtitle": "Una plataforma SaaS futurista y premium diseñada para las startups de IA modernas. Escalable, multilingüe e impresionante.",
@@ -37,4 +38,5 @@
   },
 
   "Sidebar": "Barra lateral"
+}
 }
