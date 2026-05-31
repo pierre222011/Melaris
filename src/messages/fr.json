@@ -304,5 +304,7 @@
       "description": "Générateur de langues fictives simples.",
       "tooltip": "Crée une phonologie, un vocabulaire et des règles de grammaire."
     }
-  }
+  },
+
+  "Sidebar": "Barre latérale"
 }

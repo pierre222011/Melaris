@@ -34,5 +34,7 @@
     "experimental": "Laboratorios Experimentales",
     "unstable": "Altamente Inestable",
     "future_vision": "Visión del Futuro"
-  }
+  },
+
+  "Sidebar": "Barra lateral"
 }

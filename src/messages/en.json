@@ -304,5 +304,7 @@
       "description": "Generator of simple fictional languages.",
       "tooltip": "Creates phonology, vocabulary, and grammar rules for worldbuilding."
     }
-  }
+  },
+
+  "Sidebar": "Sidebar"
 }
