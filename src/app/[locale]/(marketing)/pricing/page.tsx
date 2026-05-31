@@ -13,9 +13,10 @@ export default async function PricingPage({params}: {params: Promise<{locale: st
     {
       name: 'Free',
       description: t('Free_desc'),
-      price: '$0',
+      price: '0€',
       icon: Star,
       features: [
+        '50 Melacoins / month',
         t('Free_feat_1'),
         t('Free_feat_2'),
       ],
@@ -25,36 +26,36 @@ export default async function PricingPage({params}: {params: Promise<{locale: st
       tier: 'free',
     },
     {
-      name: 'Premium',
-      description: t('Premium_desc'),
-      price: '$9',
+      name: 'Pro',
+      description: t('Pro_desc'),
+      price: '9.99€',
       period: '/mo',
       icon: Zap,
       features: [
+        '800 Melacoins / month',
         t('Premium_feat_1'),
         t('Premium_feat_2'),
-        t('Premium_feat_3'),
       ],
-      cta: t('Premium_cta'),
-      link: '/api/stripe/checkout?tier=premium',
+      cta: 'Get Pro',
+      link: '/api/stripe/checkout?tier=pro&type=subscription',
       popular: true,
-      tier: 'premium',
+      tier: 'pro',
     },
     {
-      name: 'Supporter',
-      description: t('Supporter_desc'),
-      price: '$29',
+      name: 'Premium',
+      description: t('Premium_desc'),
+      price: '19.99€',
       period: '/mo',
       icon: Sparkles,
       features: [
-        t('Supporter_feat_1'),
-        t('Supporter_feat_2'),
+        '2 000 Melacoins / month',
+        t('Premium_feat_3'),
         t('Supporter_feat_3'),
       ],
-      cta: t('Supporter_cta'),
-      link: '/api/stripe/checkout?tier=supporter',
+      cta: t('Premium_cta'),
+      link: '/api/stripe/checkout?tier=premium&type=subscription',
       popular: false,
-      tier: 'supporter',
+      tier: 'premium',
     }
   ];
 
@@ -75,7 +76,7 @@ export default async function PricingPage({params}: {params: Promise<{locale: st
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-32">
           {plans.map((plan, i) => {
             const Icon = plan.icon;
             return (
@@ -133,6 +134,64 @@ export default async function PricingPage({params}: {params: Promise<{locale: st
               </div>
             );
           })}
+        </div>
+
+        {/* Melacoins Shop Section */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="font-syne text-3xl md:text-4xl font-bold text-white mb-4">
+            {t('Shop_title')}
+          </h2>
+          <p className="text-lg text-gray-400 font-inter">
+            {t('Shop_subtitle')}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          {[
+            { name: 'Starter', coins: 300, price: '4,99€', tier: 'starter' },
+            { name: 'Basic', coins: 650, price: '9,99€', tier: 'basic', popular: true },
+            { name: 'Plus', coins: '1 500', price: '19,99€', tier: 'plus' },
+            { name: 'Large', coins: '3 500', price: '39,99€', tier: 'large' },
+          ].map((pack) => (
+            <div 
+              key={pack.name}
+              className={`relative rounded-2xl p-6 backdrop-blur-xl border transition-all flex flex-col items-center text-center ${
+                pack.popular 
+                  ? 'bg-white/10 border-yellow-500/50 shadow-[0_0_30px_rgba(234,179,8,0.15)] transform md:-translate-y-2' 
+                  : 'bg-white/5 border-white/10 hover:border-white/20'
+              }`}
+            >
+              {pack.popular && (
+                <div className="absolute -top-3 left-0 right-0 flex justify-center">
+                  <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black text-[10px] font-bold uppercase tracking-wider py-1 px-3 rounded-full shadow-lg">
+                    {t('Best_value')}
+                  </span>
+                </div>
+              )}
+              
+              <div className="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mb-4 border border-white/10">
+                <Sparkles className={`w-8 h-8 ${pack.popular ? 'text-yellow-400' : 'text-neon-blue'}`} />
+              </div>
+              
+              <h3 className="text-xl font-syne font-bold text-white mb-1">{pack.name}</h3>
+              <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-purple mb-4">
+                {pack.coins} Coins
+              </div>
+              
+              <div className="text-xl text-gray-300 font-medium mb-6">{pack.price}</div>
+              
+              <Link 
+                href={`/api/stripe/checkout?tier=${pack.tier}&type=pack`}
+                className={`w-full py-2.5 px-4 rounded-xl text-sm font-medium transition-all ${
+                  pack.popular
+                    ? 'bg-yellow-500 hover:bg-yellow-400 text-black shadow-[0_0_15px_rgba(234,179,8,0.3)]'
+                    : 'bg-white/10 text-white hover:bg-white/20'
+                }`}
+              >
+                {t('Buy_now')}
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     </div>

@@ -14,8 +14,6 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({locale}));
 }
 
-import KonamiCode from '@/components/ui/KonamiCode';
-
 export default async function LocaleLayout({
   children,
   params
@@ -44,7 +42,6 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
-        <KonamiCode />
         <Analytics />
       </body>
     </html>

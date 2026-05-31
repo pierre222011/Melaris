@@ -33,16 +33,17 @@
     "Free_feat_1": "Accès aux outils basiques",
     "Free_feat_2": "Votes quotidiens limités",
     "Free_cta": "Commencer",
-    "Premium_desc": "Débloquez tout le potentiel des outils IA de Melaris.",
+    "Pro_desc": "Débloquez la puissance des outils IA de Melaris.",
+    "Premium_desc": "Puissance maximale pour les créateurs sérieux.",
     "Premium_feat_1": "Accès illimité à tous les outils",
     "Premium_feat_2": "Générations IA avancées",
     "Premium_feat_3": "Accès anticipé aux nouveautés",
     "Premium_cta": "Passer au Premium",
-    "Supporter_desc": "Soutenez le projet et obtenez des avantages exclusifs.",
-    "Supporter_feat_1": "Pouvoir de vote x10",
-    "Supporter_feat_2": "Badge exclusif Supporter",
     "Supporter_feat_3": "Accès anticipé à tout",
-    "Supporter_cta": "Devenir Supporter"
+    "Shop_title": "Boutique Melacoins",
+    "Shop_subtitle": "Besoin de plus de crédits ? Rechargez votre solde avec des packs uniques.",
+    "Best_value": "Meilleur rapport",
+    "Buy_now": "Acheter"
   },
   "Roadmap": {
     "All": "Tout",

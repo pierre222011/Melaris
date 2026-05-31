@@ -12,21 +12,28 @@ export async function GET(request: Request) {
 
     const { searchParams } = new URL(request.url);
     const tier = searchParams.get('tier');
+    const type = searchParams.get('type') || 'subscription'; // 'subscription' or 'pack'
 
-    if (!tier || !['premium', 'supporter'].includes(tier)) {
+    if (!tier) {
       return new NextResponse('Invalid tier', { status: 400 });
     }
 
-    // Usually you would map tiers to actual Stripe Price IDs here.
-    // For this example, we'll use placeholder or dynamically created prices 
-    // or tell the user to add STRIPE_PRICE_ID_PREMIUM to env.
-    const priceId = tier === 'premium' 
-      ? process.env.STRIPE_PRICE_ID_PREMIUM 
-      : process.env.STRIPE_PRICE_ID_SUPPORTER;
+    // Determine price ID
+    let priceId = '';
+    
+    if (type === 'subscription') {
+      priceId = tier === 'premium' 
+        ? process.env.STRIPE_PRICE_ID_PREMIUM! 
+        : process.env.STRIPE_PRICE_ID_PRO!;
+    } else if (type === 'pack') {
+      if (tier === 'starter') priceId = process.env.STRIPE_PRICE_ID_PACK_STARTER!;
+      else if (tier === 'basic') priceId = process.env.STRIPE_PRICE_ID_PACK_BASIC!;
+      else if (tier === 'plus') priceId = process.env.STRIPE_PRICE_ID_PACK_PLUS!;
+      else if (tier === 'large') priceId = process.env.STRIPE_PRICE_ID_PACK_LARGE!;
+    }
 
     if (!priceId) {
-      console.warn(`Missing Stripe Price ID for ${tier}. You need to create products in Stripe and add their Price IDs to .env.local`);
-      // Fallback for development if no price is set (this will crash if actually clicked without prices)
+      console.warn(`Missing Stripe Price ID for ${tier} (${type}). Add it to .env.local`);
       return new NextResponse(`Stripe Price ID for ${tier} is not configured in .env.local`, { status: 500 });
     }
 
@@ -39,13 +46,14 @@ export async function GET(request: Request) {
           quantity: 1,
         },
       ],
-      mode: 'subscription',
+      mode: type === 'subscription' ? 'subscription' : 'payment',
       success_url: `${request.headers.get('origin')}/app?success=true&session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${request.headers.get('origin')}/pricing?canceled=true`,
       client_reference_id: userId,
       metadata: {
         userId,
-        tier
+        action: type,
+        tierOrPack: tier
       }
     });
 

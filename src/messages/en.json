@@ -33,16 +33,17 @@
     "Free_feat_1": "Access to basic tools",
     "Free_feat_2": "Limited daily votes",
     "Free_cta": "Get Started",
-    "Premium_desc": "Unlock the full potential of Melaris AI tools.",
+    "Pro_desc": "Unlock the power of Melaris AI tools.",
+    "Premium_desc": "Maximum power for serious creators.",
     "Premium_feat_1": "Unlimited access to all tools",
     "Premium_feat_2": "Advanced AI generations",
     "Premium_feat_3": "Beta access to new features",
     "Premium_cta": "Upgrade to Premium",
-    "Supporter_desc": "Support the project and get exclusive perks.",
-    "Supporter_feat_1": "10x more voting power",
-    "Supporter_feat_2": "Exclusive Supporter Badge",
     "Supporter_feat_3": "Early access to everything",
-    "Supporter_cta": "Become a Supporter"
+    "Shop_title": "Melacoins Shop",
+    "Shop_subtitle": "Need more credits? Top up your balance with one-time packs.",
+    "Best_value": "Best Value",
+    "Buy_now": "Buy Now"
   },
   "Roadmap": {
     "All": "All",

@@ -3,10 +3,21 @@ import { auth } from '@clerk/nextjs/server';
 import {Link} from '@/i18n/routing';
 import {getTranslations} from 'next-intl/server';
 import LanguageSwitcher from '../ui/LanguageSwitcher';
+import { createAdminClient } from '@/utils/supabase/admin';
+import { Coins } from 'lucide-react';
 
 export default async function Navbar() {
   const { userId } = await auth();
   const t = await getTranslations('Navigation');
+  
+  let melacoinsBalance = 0;
+  if (userId) {
+    const supabase = createAdminClient();
+    const { data } = await supabase.from('users').select('melacoins_balance').eq('id', userId).single();
+    if (data) {
+      melacoinsBalance = data.melacoins_balance;
+    }
+  }
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-[#050816]/50 backdrop-blur-md">
@@ -45,6 +56,13 @@ export default async function Navbar() {
                 </Link>
               ) : (
                 <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-1.5 bg-white/5 border border-white/10 px-3 py-1.5 rounded-full">
+                    <Coins className="w-4 h-4 text-yellow-400" />
+                    <span className="text-sm font-medium text-white">{melacoinsBalance}</span>
+                    <Link href="/pricing" className="ml-2 text-[10px] uppercase font-bold text-neon-blue hover:text-white transition-colors">
+                      Buy
+                    </Link>
+                  </div>
                   <UserButton appearance={{ elements: { avatarBox: "w-8 h-8 rounded-full border border-white/20" } }} />
                 </div>
               )}

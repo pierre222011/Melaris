@@ -4,25 +4,11 @@ import { createAdminClient } from '@/utils/supabase/admin';
 import { auth } from '@clerk/nextjs/server';
 import { Feature, Category } from '@/types';
 import { revalidatePath } from 'next/cache';
-import { cookies } from 'next/headers';
-
-// Helper to get userId including dev bypass
-async function getEffectiveUserId() {
-  let { userId } = await auth();
-  
-  if (process.env.NODE_ENV === 'development' && !userId) {
-    const cookieStore = await cookies();
-    if (cookieStore.get('melaris_dev_admin')?.value === 'true') {
-      userId = 'dev_admin_bypass';
-    }
-  }
-  return userId;
-}
 
 // Fetch all features from Supabase
 export async function getFeatures(): Promise<Feature[]> {
   const supabase = createAdminClient();
-  const userId = await getEffectiveUserId();
+  const { userId } = await auth();
 
   // Fetch features with their category name
   const { data: featuresData, error: featuresError } = await supabase
@@ -74,7 +60,7 @@ export async function getFeatures(): Promise<Feature[]> {
 
 // Vote for a feature
 export async function voteForFeature(featureId: string) {
-  const userId = await getEffectiveUserId();
+  const { userId } = await auth();
   
   if (!userId) {
     throw new Error('You must be logged in to vote');
